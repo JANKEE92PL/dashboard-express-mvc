@@ -1,0 +1,111 @@
+
+.header {
+    background-color: var(--header);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header .box {
+    position: relative;
+    display: flex;
+    /*margin: 0 auto;*/
+    height: 100%;
+    justify-content: space-between;
+    max-width: 1500px;
+    width: auto !important;
+    padding: 0 30px;
+    width: 100%;
+    overflow: hidden;
+    min-width: 1000px;
+    height: 80px;
+}
+
+.box > a {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+}
+
+svg.logo {
+    position: absolute;
+    height: 44px;
+    max-width: 32px;
+    top: 18px;
+    left: 35px;
+    color: #7cacc7;
+    fill: #5c8eab;
+}
+
+.header h1.logo {
+    position: relative;
+    margin: 0;
+    padding-left: 48px;
+    font-size: 30px;
+    font-weight: 300;
+    color: var(--font-white);
+    float: left;
+}
+
+:not(svg) {
+    transform-origin: 0px 0px;
+}
+
+.shield {
+    position: absolute;
+    height: 84px;
+    width: 64px;
+    margin-left: -32px;
+    left: 50%;
+    top: 28px;
+    z-index: 99;
+    background: url(../images/shield-bg.png);
+}
+
+.shield svg {
+    position: absolute;
+    width: 39px;
+    height: 50px;
+    left: 50%;
+    margin-left: -20px;
+    top: 16px;
+}
+
+.shield path:nth-of-type(1) {
+    fill: var(--secondary);
+}
+
+.shield path:nth-of-type(2) {
+    fill: #03314f;
+}
+
+.shield path:nth-of-type(3) {
+    fill: var(--secondary);
+}
+
+a {
+    color: #00b7ff;
+}
+
+h1 {
+    color: var(--font-white);
+    margin: 0 auto;
+}
+
+.login {
+    text-decoration: none;
+    color: var(--font-meta);
+    font-weight: bold;
+    align-self: baseline;
+    justify-self: first;
+    padding: 1rem;
+    background-color: #0b6298;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    transition: all 250ms ease-in-out;
+}
+
+.login:hover {
+    color: var(--secondary);
+    box-shadow: var(--shadow-light);
+}

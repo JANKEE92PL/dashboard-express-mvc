@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
+@import url("header.css");
+@import url("sidebar.css");
+@import url("main.css");
+@import url("animation.css");
+@import url("form.css");
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --header: #04395a;
+    --primary: #0b6298;
+    --secondary: #78DE2B;
+    --table-row-odd: #05314e;
+    --table-row-even: #053959;
+    --font-white: #fff;
+    --font-light: #7cacc7;
+    --font-meta: #5c8eab;
+    --body-bg: #002842;
+    --shadow-light: 0 5px 5px 5px rgba(0, 0, 0, .20);
+    --border-radius: 16px;
+    --offline: #ca1c1b;
+    --online: #78DE2B;
+    --opacity25: 25%;
+    --opacity50: 50%;
+    --opacity75: 75%;
+}
+
+body {
+    font-family: "Mulish", sans-serif;
+    letter-spacing: 1px;
+    background-color: var(--body-bg);
+}
+
+.meta {
+    margin: 2rem 0;
+    padding: 1rem;
+    color: var(--secondary);
+    background-color: #0b6298;
+    display: flex;
+    justify-content: space-evenly;
+}
+
