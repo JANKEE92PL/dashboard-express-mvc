@@ -1,0 +1,32 @@
+<%- include('layout.ejs'); %>
+<%- include('sidebar.ejs'); %>
+
+
+<div class="container">
+    <h1 class="main-h1">Settings</h1>
+
+    <fieldset class="">
+        <legend>Settings</legend>
+        <% locals.settings.forEach((setting)=> { %>
+            <div>
+                <label for="darkmode">Darkmode</label>
+                <input type="checkbox" name="darkmode" id="darkmode" checked="<%= setting.darkMode %>">
+            </div>
+            <div>
+                <label for="showSidebar">Show Sidebar</label>
+                <input type="checkbox" name="showSidebar" id="showSidebar" checked="<%= setting.sidebar %>">
+            </div>
+            <div>
+                <label for="showOnlineStatus">Show online status</label>
+                <input type="checkbox" name="showOnlineStatus" id="showOnlineStatus"
+                       checked="<%= setting.showOnline %>">
+            </div>
+        <% }) %>
+    </fieldset>
+
+</div>
+
+
+</body>
+
+</html>

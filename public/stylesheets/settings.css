@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.container fieldset {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 1rem;
+    color:  var(--font-meta);
+}
+.container fieldset div input {
+    display: block;
+    width: auto;
+    height: auto;
+}
+.container fieldset div label {
+    display: inline;
+}

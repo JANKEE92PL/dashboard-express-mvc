@@ -104,8 +104,3 @@ h1 {
     border-radius: 0 0 var(--border-radius) var(--border-radius);
     transition: all 250ms ease-in-out;
 }
-
-.login:hover {
-    color: var(--secondary);
-    box-shadow: var(--shadow-light);
-}
