@@ -61,6 +61,10 @@ const loginView = (req, res) => {
     res.render("login", {path: req.path});
 };
 
+const indexView = (req, res) => {
+    res.render("index", {path: req.path});
+};
+
 //Logging in Function
 
 const loginUser = (req, res) => {
@@ -87,4 +91,5 @@ module.exports = {
     loginView,
     registerUser,
     loginUser,
+    indexView
 };
