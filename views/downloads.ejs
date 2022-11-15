@@ -8,15 +8,16 @@
     <table>
         <thead>
         <tr>
-            <th>Status</th>
+            <th>Type</th>
             <th>Filename</th>
             <th>Size</th>
+            <th>Downloaded</th>
         </tr>
         </thead>
         <tbody>
         <% data.forEach((obj) => { %>
             <tr>
-                <td class="status"><i class='bx bxs-check-circle <%= obj.online ? "online" : "offline" %>'></i></td>
+                <td class="status"><i class='bx bxs-file<%= obj.icon %>'></i></td>
                 <td title="<%= obj.title %>"><%= obj.title %>
                     <span>
                     <a href="<%= obj.online ? obj.url : '#' %>" target="blank"><%= obj.subtitle %></a>
@@ -26,13 +27,8 @@
                     <p><%= obj.filesize %></p>
                     <span> <%= obj.unit.toUpperCase() %></span>
                 </td>
-                <td>
-                    <a class="button download <%= obj.online ? "online" : "offline" %>"
-                       target="_blank"
-                       title="download"
-                       href="<%= obj.online ? obj.url : '#' %>">
-                        <%= obj.online ? "Download" : "Offline" %>
-                    </a>
+                <td class="downloaded">
+                    <p><%= obj.downloaded %></p>
                 </td>
             </tr>
         <% }) %>
