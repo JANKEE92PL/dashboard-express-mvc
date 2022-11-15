@@ -107,6 +107,7 @@ button{
 .social{
     margin-top: 30px;
     display: flex;
+    justify-content: space-between;
 }
 .social div{
     background: red;
@@ -117,11 +118,11 @@ button{
     color: #eaf0fb;
     text-align: center;
 }
+div.social a {
+    text-decoration: none;
+}
 .social div:hover{
     background-color: rgba(255,255,255,0.47);
-}
-.social .fb{
-    margin-left: 25px;
 }
 .social i{
     margin-right: 4px;
