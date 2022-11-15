@@ -10,16 +10,22 @@
         <% locals.settings.forEach((setting)=> { %>
             <div>
                 <label for="darkmode">Darkmode</label>
-                <input type="checkbox" name="darkmode" id="darkmode" checked="<%= setting.darkMode %>">
+                <input type="checkbox" name="darkmode" id="darkmode"
+                        <%- !setting.prefered.darkMode ? "" : "checked" %>
+                >
+
             </div>
             <div>
                 <label for="showSidebar">Show Sidebar</label>
-                <input type="checkbox" name="showSidebar" id="showSidebar" checked="<%= setting.sidebar %>">
+                <input type="checkbox" name="showSidebar" id="showSidebar"
+                        <%- !setting.prefered.sidebar ? "" : "checked" %>
+                >
             </div>
             <div>
                 <label for="showOnlineStatus">Show online status</label>
                 <input type="checkbox" name="showOnlineStatus" id="showOnlineStatus"
-                       checked="<%= setting.showOnline %>">
+                        <%- !setting.prefered.showOnline ? "" : "checked" %>
+                >
             </div>
         <% }) %>
     </fieldset>

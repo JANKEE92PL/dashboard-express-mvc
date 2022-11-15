@@ -98,7 +98,7 @@ h1 {
     color: var(--font-meta);
     font-weight: bold;
     align-self: baseline;
-    justify-self: first;
+    justify-self: baseline;
     padding: 1rem;
     background-color: #0b6298;
     border-radius: 0 0 var(--border-radius) var(--border-radius);

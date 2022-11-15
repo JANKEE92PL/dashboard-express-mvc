@@ -1,9 +1,16 @@
 let settingsJson = [{
-    "darkMode": true,
-    "sidebar": true,
-    "showOnline": true
+    "user": "Seba",
+    "default": {
+        "darkMode": false,
+        "sidebar": true,
+        "showOnline": true
+    },
+    "prefered": {
+        "darkMode": true,
+        "sidebar": false,
+        "showOnline": false
+    }
 }];
-
 
 const settingsView = (req, res) => {
     res.render("settings", {path: req.path, settings: settingsJson});

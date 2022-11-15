@@ -9,17 +9,19 @@ const {
 } = require("../controllers/loginController");
 const {dashboardView} = require("../controllers/dashboardController");
 const {settingsView} = require("../controllers/settingsController");
+const {filesView} = require("../controllers/filesController");
 const {protectRoute} = require("../auth/protect");
 
 const router = express.Router();
 
 
-router.get("/register", registerView);
-router.get("/settings", settingsView);
 router.get("/login", loginView);
+router.get("/register", registerView);
+router.get("/dashboard", protectRoute, dashboardView);
+router.get("/settings", protectRoute, settingsView);
+router.get("/files", protectRoute, filesView);
 router.get("/", indexView);
 //Dashboard
-router.get("/dashboard", protectRoute, dashboardView);
 
 router.post("/register", registerUser);
 router.post("/login", loginUser);
