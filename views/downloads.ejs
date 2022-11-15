@@ -1,0 +1,48 @@
+<%- include('layout.ejs'); %>
+<%- include('sidebar.ejs'); %>
+
+
+<div class="container" data-route="<%= locals.path %>">
+    <h1 class="main-h1">Downloads</h1>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Status</th>
+            <th>Filename</th>
+            <th>Size</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% data.forEach((obj) => { %>
+            <tr>
+                <td class="status"><i class='bx bxs-check-circle <%= obj.online ? "online" : "offline" %>'></i></td>
+                <td title="<%= obj.title %>"><%= obj.title %>
+                    <span>
+                    <a href="<%= obj.online ? obj.url : '#' %>" target="blank"><%= obj.subtitle %></a>
+                </span>
+                </td>
+                <td class="file-size">
+                    <p><%= obj.filesize %></p>
+                    <span> <%= obj.unit.toUpperCase() %></span>
+                </td>
+                <td>
+                    <a class="button download <%= obj.online ? "online" : "offline" %>"
+                       target="_blank"
+                       title="download"
+                       href="<%= obj.online ? obj.url : '#' %>">
+                        <%= obj.online ? "Download" : "Offline" %>
+                    </a>
+                </td>
+            </tr>
+        <% }) %>
+        </tbody>
+    </table>
+
+
+</div>
+
+
+</body>
+
+</html>
