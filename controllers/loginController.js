@@ -6,15 +6,6 @@ const bcrypt = require("bcryptjs");
 const registerView = (req, res) => {
     res.render("register", {path: req.path});
 };
-//For Settings Content
-let settingsJson = [{
-    "darkMode": true,
-    "sidebar": true,
-    "showOnline": true
-}];
-const settingsView = (req, res) => {
-    res.render("settings", {path: req.path, settings: settingsJson});
-};
 
 //Post Request for Register
 
@@ -100,6 +91,5 @@ module.exports = {
     loginView,
     registerUser,
     loginUser,
-    indexView,
-    settingsView
+    indexView
 };

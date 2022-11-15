@@ -5,10 +5,10 @@ const {
     loginView,
     registerUser,
     loginUser,
-    indexView,
-    settingsView
+    indexView
 } = require("../controllers/loginController");
 const {dashboardView} = require("../controllers/dashboardController");
+const {settingsView} = require("../controllers/settingsController");
 const {protectRoute} = require("../auth/protect");
 
 const router = express.Router();
