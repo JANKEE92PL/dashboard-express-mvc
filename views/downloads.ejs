@@ -17,10 +17,10 @@
         <tbody>
         <% data.forEach((obj) => { %>
             <tr>
-                <td class="status"><i class='bx bxs-file<%= obj.icon %>'></i></td>
+                <td class="file"><i class='bx bxs-file<%= obj.icon %>'></i></td>
                 <td title="<%= obj.title %>"><%= obj.title %>
                     <span>
-                    <a href="<%= obj.online ? obj.url : '#' %>" target="blank"><%= obj.subtitle %></a>
+                    <a href="<%= obj.online ? '/files' : '#' %>"><%= obj.subtitle %></a>
                 </span>
                 </td>
                 <td class="file-size">
@@ -28,7 +28,7 @@
                     <span> <%= obj.unit.toUpperCase() %></span>
                 </td>
                 <td class="downloaded">
-                    <p><%= obj.downloaded %></p>
+                    <i class='bx bx-message-square-<%= obj.downloaded ? "check" : "x" %>'></i>
                 </td>
             </tr>
         <% }) %>

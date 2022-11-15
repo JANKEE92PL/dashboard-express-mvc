@@ -5,30 +5,36 @@
 <div class="container" data-route="<%= locals.path %>">
     <h1 class="main-h1">Settings</h1>
 
-    <fieldset class="">
-        <legend>Settings</legend>
-        <% locals.settings.forEach((setting)=> { %>
-            <div>
-                <label for="darkmode">Darkmode</label>
-                <input type="checkbox" name="darkmode" id="darkmode"
-                        <%- !setting.prefered.darkMode ? "" : "checked" %>
-                >
+    <table>
+        <thead>
+        <tr>
+            <th>Option</th>
+            <th>Status</th>
+            <th>Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% for (let key in settings) { %>
+            <tr>
+                <td class="capitalize">
+                    <p><%= key.toLowerCase() %></p>
+                </td>
+                <td class="downloaded">
+                    <i class='bx bx-message-square-<%= settings[key] ? "check" : "x" %>'></i>
+                </td>
+                <td class="capitalize">
+                    <input type="checkbox" name="<%= key %>" id="<%= key %>"
+                            <%- !settings[key] ? "" : "checked" %>
+                    >
+                </td>
+            </tr>
+        <% } %>
+        </tbody>
+    </table>
+    <div class="save">
+        <a class="button" title="save" href="/settings">Save</a>
+    </div>
 
-            </div>
-            <div>
-                <label for="showSidebar">Show Sidebar</label>
-                <input type="checkbox" name="showSidebar" id="showSidebar"
-                        <%- !setting.prefered.sidebar ? "" : "checked" %>
-                >
-            </div>
-            <div>
-                <label for="showOnlineStatus">Show online status</label>
-                <input type="checkbox" name="showOnlineStatus" id="showOnlineStatus"
-                        <%- !setting.prefered.showOnline ? "" : "checked" %>
-                >
-            </div>
-        <% }) %>
-    </fieldset>
 
 </div>
 
